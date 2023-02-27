@@ -16,4 +16,18 @@ class Cut2
     echo "「{$meat}{$gram}グラムを{$thickness}センチにカットしました」\n";
     return $thickness;
   }
+
+  public function cutOnion(){
+    echo "「玉ねぎを何グラムみじん切りにしますか？」\n";
+    while(true){
+      $cutonion = (int)readline();
+      if($cutonion === null || $cutonion === 0){
+        echo "「正しい入力を行ってください。文字列や数字の０、入力なしでエンターは正しくありません」\n";
+      }else {
+        break;
+      }
+    }
+    echo "「玉ねぎを{$cutonion}グラムみじん切りにしました」\n";
+    return $cutonion;
+  }
 }

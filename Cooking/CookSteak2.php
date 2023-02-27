@@ -15,7 +15,7 @@ class CookSteak2
     echo "「肉番号を入力してください」\n";
     while(true){
       $number = (int)readline();
-      if(is_int($number) || $number != 0 || !$number != null){
+      if($gram === null || $gram === 0){
         break;
       } else {
         echo "「正しい入力を行ってください。文字列や小数点、数字の０、入力なしでエンターは正しくありません」\n";
