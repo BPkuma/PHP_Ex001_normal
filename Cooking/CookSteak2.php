@@ -11,6 +11,7 @@ const CHICKEN = "鶏肉";
 class CookSteak2
 {
   
+
   public function cookSteak():void {
     echo "「肉番号を入力してください」\n";
     while(true){

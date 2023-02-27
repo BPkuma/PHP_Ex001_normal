@@ -4,7 +4,8 @@ namespace Operation;
 class Saute
 {
   public function Saute($food, $gram){
-    echo "「{$food}を炒める時間を入力してください」";
+
+    echo "「{$food}を炒める時間を入力してください」\n";
     while(true){
       $minute = (int)readline();
       if($minute === null || $minute === 0){
@@ -16,16 +17,13 @@ class Saute
       echo "「{$food}{$gram}グラムを{$minute}分間炒めます」\n";
 
     $flag = $gram  / $minute;
-    global $point;
-    $point = 0;
+    $getpoint = 0;
 
     if (7 <= $flag && $flag <= 13){
-      return $point += 1;
+      return $getpoint += 1;
     } else {
-      return $point -= 1;
+      return $getpoint -= 1;
     }
 
     }
   }
-
-  Saute::Saute("玉ねぎ", 5);

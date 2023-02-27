@@ -62,4 +62,35 @@ class Grill2
     }
     return $bool;
   }
+
+  public function grilledHamburgSteak($gram){
+    echo "「{$gram}グラムのハンバーグをオーブンで焼きます」\n";
+    echo "「焼き時間を設定してください」\n";
+    while(true){
+      $minute = (int)readline();
+      if($minute === null || $minute === 0){
+        echo "「正しい入力を行ってください。文字列や数字の０、入力なしでエンターは正しくありません」\n";
+      }else {
+        break;
+      }
+    }
+
+    $flag = $gram / $minute;
+
+    $getpoint = 0;
+  
+    if ($flag <= 10) {
+      echo "「焦げました」\n";
+      $getpoint -= 2;
+    } else if ($flag >= 20) {
+      echo "「生焼けです」\n";
+      $getpoint -= 2;
+    } else {
+      echo "「美味しく焼けました」\n";
+      $getpoint += 2;
+    }
+
+    return $getpoint;
+  }
+
 }

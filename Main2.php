@@ -1,10 +1,14 @@
 <?php
 require_once 'Cooking/CookSteak2.php';
+require_once 'Cooking/CookHamburgerSteak.php';
 
 use Cooking\CookSteak2;
+use Cooking\CookHamburgerSteak;
 
 class Main
 {
+  public $point = 0;
+
   public static function process(){
     echo "「メニュー番号を入力してください」\n";
     $number = readline();
@@ -27,3 +31,5 @@ class Main
   }
 }
 
+$main = new Main();
+$main->process();

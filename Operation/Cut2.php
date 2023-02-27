@@ -20,14 +20,14 @@ class Cut2
   public function cutOnion(){
     echo "「玉ねぎを何グラムみじん切りにしますか？」\n";
     while(true){
-      $cutonion = (int)readline();
-      if($cutonion === null || $cutonion === 0){
+      $onion_gram = (int)readline();
+      if($onion_gram === null || $onion_gram === 0){
         echo "「正しい入力を行ってください。文字列や数字の０、入力なしでエンターは正しくありません」\n";
       }else {
         break;
       }
     }
-    echo "「玉ねぎを{$cutonion}グラムみじん切りにしました」\n";
-    return $cutonion;
+    echo "「玉ねぎを{$onion_gram}グラムみじん切りにしました」\n";
+    return $onion_gram;
   }
 }
