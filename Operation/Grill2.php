@@ -81,12 +81,15 @@ class Grill2
   
     if ($flag <= 10) {
       echo "「焦げました」\n";
-      $getpoint -= 2;
+      $getpoint -= 10;
+    } else if ($flag >=15 && $flag < 20){
+      echo "「もう少し焼けば完璧でした」\n";
+      $getpoint += 1;
     } else if ($flag >= 20) {
-      echo "「生焼けです」\n";
-      $getpoint -= 2;
+      echo "「もう少し焼いても良かったですね」\n";
+      $getpoint += 0;
     } else {
-      echo "「美味しく焼けました」\n";
+      echo "「ちょうど良く焼けました」\n";
       $getpoint += 2;
     }
 

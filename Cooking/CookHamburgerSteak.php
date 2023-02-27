@@ -29,7 +29,7 @@ class CookHamburgerSteak
     $grill = new Grill2();
     $this->point += ($grill->grilledHamburgSteak($all));
 
-    if($this->point <= 1){
+    if($this->point >= 1){
       echo "「美味しいハンバーグが焼けました」\n";
     } else {
       echo "「このハンバーグは失敗作です」\n";
