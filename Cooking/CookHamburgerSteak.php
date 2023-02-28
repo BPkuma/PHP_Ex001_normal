@@ -1,21 +1,21 @@
 <?php
 namespace Cooking;
 require_once 'Operation/Saute.php';
-require_once 'Operation/Cut2.php';
+require_once 'Operation/Cut.php';
 require_once 'Operation/Mix.php';
-require_once 'Operation/Grill2.php';
+require_once 'Operation/Grill.php';
 
 use Operation\Saute;
-use Operation\Cut2;
+use Operation\Cut;
 use Operation\Mix;
-use Operation\Grill2;
+use Operation\Grill;
 
 class CookHamburgerSteak
 {
   public $point = 0;
 
   public function cookHamburgerSteak(){
-    $cutonion = new Cut2();
+    $cutonion = new Cut();
     $gram = $cutonion->cutOnion();
 
     $saute = new Saute();
@@ -26,7 +26,7 @@ class CookHamburgerSteak
 
     $this->point += $getpoint;
     
-    $grill = new Grill2();
+    $grill = new Grill();
     $this->point += ($grill->grilledHamburgSteak($all));
 
     if($this->point >= 1){
