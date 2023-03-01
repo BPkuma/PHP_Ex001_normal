@@ -10,7 +10,7 @@ class Main
   public $point = 0;
 
   public static function process(){
-    echo "「メニュー番号を入力してください」\n1 : ステーキ\n2 : ハンバーグ\n";
+    echo "「メニュー番号を入力してください」\n[ 1 ] ステーキ\n[ 2 ] ハンバーグ\n";
     $number = readline();
 
     switch($number) {
