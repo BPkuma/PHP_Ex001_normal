@@ -21,7 +21,7 @@ class Validate
       if($word === null || $word === 0){
         echo "「正しい入力を行ってください。文字列や数字の０、入力なしでエンターは正しくありません」\n";
       } else if($word > $compare / $amount){
-        echo "「{$word}の量が多すぎます。もう一度入れる量を入力してください。」\n";
+        echo "「{$target}の量が多すぎます。もう一度入れる量を入力してください。」\n";
       } else {
         break;
       }
