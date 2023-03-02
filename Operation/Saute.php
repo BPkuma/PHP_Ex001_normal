@@ -12,7 +12,7 @@ class Saute
     $minute = 0;
     $minute = Validate::validate($minute);
 
-      echo "「{$food}{$gram}グラムを{$minute}分間炒めます」\n";
+      echo "「{$food}{$gram}gを{$minute}分間炒めます」\n";
 
     $flag = $gram  / $minute;
     $point = 0;

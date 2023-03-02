@@ -39,7 +39,7 @@ class Cut
       $this->point += 1;
     }
 
-    echo "「{$meat}{$gram}グラムを{$this->thickness}センチにカットしました」\n";
+    echo "「{$meat}{$gram}gを{$this->thickness}cmにカットしました」\n";
     return $this->thickness;
     }
   ///////////////////////////////////////
@@ -49,11 +49,11 @@ class Cut
   // Memo         
   ///////////////////////////////////////
   public function cutOnion(){
-    echo "「玉ねぎを何グラム使用しますか？」\n";
+    echo "「玉ねぎを何g使用しますか？」\n";
 
     $this->onion_gram = Validate::validate();
     //ユーザーの入力値をリターンする
-    echo "「玉ねぎを{$this->onion_gram}グラムみじん切りにしました」\n";
+    echo "「玉ねぎを{$this->onion_gram}gみじん切りにしました」\n";
     return $this->onion_gram;
   }
 }

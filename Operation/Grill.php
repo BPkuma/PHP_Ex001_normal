@@ -27,7 +27,7 @@ class Grill
   }
   
   public function grilledIronPlate($food, $thickness){
-    echo "「厚さ{$thickness}センチの{$food}を鉄板で焼きます」\n";
+    echo "「厚さ{$thickness}cmの{$food}を鉄板で焼きます」\n";
     echo "「焼き時間を設定してください」\n";
 
     //validateメソッドから返ってきたユーザー入力をminuteプロパティに代入
@@ -66,7 +66,7 @@ class Grill
   }
   
   public function grilledOven($food, $gram){
-    echo "「{$gram}グラムの{$food}をオーブンで焼きます」\n";
+    echo "「{$gram}gの{$food}をオーブンで焼きます」\n";
     echo "「焼き時間を設定してください」\n";
 
     $this->minute = Validate::validate();
@@ -92,7 +92,7 @@ class Grill
   }
 
   public function grilledHamburgSteak($gram){
-    echo "「{$gram}グラムのハンバーグをオーブンで焼きます」\n";
+    echo "「{$gram}gのハンバーグをオーブンで焼きます」\n";
     echo "「焼き時間を設定してください」\n";
 
     $minute = Validate::validate();
