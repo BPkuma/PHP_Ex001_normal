@@ -14,8 +14,12 @@ class Mix
   private $all;
   private $point;
 
-  
-
+  ///////////////////////////////////////
+  // MethodName    mix
+  // Purpose       ハンバーグに使う材料を混ぜる
+  // Return        なし
+  // Memo          
+  ///////////////////////////////////////
   public function mix($onion_gram){
     echo "「肉を何グラム使用しますか？」\n";
     $this->meat_gram += Validate::validate();
