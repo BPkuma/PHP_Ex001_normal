@@ -15,6 +15,12 @@ class Cut
   private $onion_gram;
   public $point;
 
+  ///////////////////////////////////////
+  // MethodName   cutMeat
+  // Purpose      ユーザーが決めた厚さで肉をカット
+  // Return       thickness
+  // Memo         
+  ///////////////////////////////////////
   public function cutMeat($meat, $gram) {
     echo "「肉をカットする厚さを入力してください」\n";
 
@@ -36,7 +42,12 @@ class Cut
     echo "「{$meat}{$gram}グラムを{$this->thickness}センチにカットしました」\n";
     return $this->thickness;
     }
-
+  ///////////////////////////////////////
+  // ClassName    cutOnion
+  // Purpose      ユーザーが決めた量の玉ねぎを切る
+  // Return       onion_gram
+  // Memo         
+  ///////////////////////////////////////
   public function cutOnion(){
     echo "「玉ねぎを何グラム使用しますか？」\n";
 
