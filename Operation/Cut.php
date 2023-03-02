@@ -52,7 +52,7 @@ class Cut
     echo "「玉ねぎを何グラム使用しますか？」\n";
 
     $this->onion_gram = Validate::validate();
-
+    //ユーザーの入力値をリターンする
     echo "「玉ねぎを{$this->onion_gram}グラムみじん切りにしました」\n";
     return $this->onion_gram;
   }

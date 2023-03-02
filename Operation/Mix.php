@@ -17,25 +17,29 @@ class Mix
   ///////////////////////////////////////
   // MethodName    mix
   // Purpose       ハンバーグに使う材料を混ぜる
-  // Return        なし
+  // Return        この工程の得点と総重量を配列でリターン
   // Memo          
   ///////////////////////////////////////
   public function mix($onion_gram){
     echo "「肉を何グラム使用しますか？」\n";
-    $this->meat_gram += Validate::validate();
+    $this->meat_gram += Validate::validate_meat(50);
 
     echo "「卵を何グラム入れますか？」\n";
+    echo "[今の状態 : 肉{$this->meat_gram}g / 玉ねぎ{$onion_gram}g]\n";
     $this->egg_gram += Validate::validate_notice("卵", $this->meat_gram, 3);
 
     echo "「パン粉を何グラム入れますか？」\n";
+    echo "[今の状態 : 肉{$this->meat_gram}g / 玉ねぎ{$onion_gram}g / 卵{$this->egg_gram}g]\n";
     $this->bread_gram += Validate::validate_notice("パン粉", $this->meat_gram, 5);
-
-    echo "「塩を何グラム入れますか？」\n";
-    $this->salt_gram += Validate::validate_notice("塩", $this->meat_gram, 15);
 
     $this->all = $this->meat_gram + $this->egg_gram + $this->bread_gram + $onion_gram;
 
-    echo "「全体重量{$this->all}グラムに対して塩を{$this->salt_gram}グラム入れました」\n";
+    echo "「塩を何グラム入れますか？」\n";
+    echo "[今の状態 : 肉{$this->meat_gram}g / 玉ねぎ{$onion_gram}g / 卵{$this->egg_gram}g / パン粉{$this->bread_gram}g / 総量{$this->all}g]\n";
+    $this->salt_gram += Validate::validate_notice("塩", $this->meat_gram, 15);
+
+
+    echo "「総量{$this->all}グラムに対して塩を{$this->salt_gram}グラム入れました」\n";
     
     $flag = $this->salt_gram / $this->all;
     $this->point = 0;
