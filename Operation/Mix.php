@@ -6,11 +6,15 @@ use Validator\Validate;
 
 class Mix
 {
-  public $meat_gram;
-  public $egg_gram;
-  public $bread_gram;
-  public $salt_gram;
-  public $all;
+  //プロパティの宣言
+  private $meat_gram;
+  private $egg_gram;
+  private $bread_gram;
+  private $salt_gram;
+  private $all;
+  private $point;
+
+  
 
   public function mix($onion_gram){
     echo "「肉を何グラム使用しますか？」\n";
@@ -30,14 +34,17 @@ class Mix
     echo "「全体重量{$this->all}グラムに対して塩を{$this->salt_gram}グラム入れました」\n";
     
     $flag = $this->salt_gram / $this->all;
-    $getpoint = 0;
+    $this->point = 0;
 
-    if (0.005 <= $flag && $flag <= 0.015){
-      $getpoint += 2;
-      return array($getpoint, $this->all);
-    } else {
-      $getpoint -= 2;
-      return array($getpoint, $this->all);
+    if (0.005 <= $flag && $flag <= 0.015)
+    {
+      $this->point += 2;
+      return array($this->point, $this->all);
+    }
+    else
+    {
+      $this->point -= 2;
+      return array($this->point, $this->all);
     }
     
   }

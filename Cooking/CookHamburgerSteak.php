@@ -12,7 +12,7 @@ use Operation\Grill;
 
 class CookHamburgerSteak
 {
-  public $point = 0;
+  public $point;
 
   public function cookHamburgerSteak(){
     $cutonion = new Cut();
@@ -22,18 +22,14 @@ class CookHamburgerSteak
     $this->point += ($saute->Saute("玉ねぎ", $gram));
 
     $mix = new Mix();
-    list($getpoint, $all) = $mix->mix($gram);
+    list($point, $all) = $mix->mix($gram);
 
-    $this->point += $getpoint;
+    $this->point += $point;
     
     $grill = new Grill();
-    $this->point += ($grill->grilledHamburgSteak($all));
+    $this->point += $grill->grilledHamburgSteak($all);
 
-    if($this->point >= 1){
-      echo "「美味しいハンバーグが焼けました」\n";
-    } else {
-      echo "「このハンバーグは失敗作です」\n";
-    }
+    return $this->point;
     
   }
 
