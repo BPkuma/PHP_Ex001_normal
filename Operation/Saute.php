@@ -15,12 +15,12 @@ class Saute
       echo "「{$food}{$gram}グラムを{$minute}分間炒めます」\n";
 
     $flag = $gram  / $minute;
-    $getpoint = 0;
+    $point = 0;
 
     if (7 <= $flag && $flag <= 13){
-      return $getpoint += 1;
+      return $point += 1;
     } else {
-      return $getpoint -= 1;
+      return $point -= 1;
     }
 
     }
