@@ -5,7 +5,7 @@ class Validate
 {
   public static function validate(){
     while(true){
-      $word = (int)readline();
+      $word = readline();
       if($word === null || $word === 0){
         echo "「正しい入力を行ってください。文字列や数字の０、入力なしでエンターは正しくありません」\n";
       } else {
