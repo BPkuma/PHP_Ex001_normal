@@ -23,5 +23,5 @@ class Saute
       return $point -= 1;
     }
 
-    }
   }
+}

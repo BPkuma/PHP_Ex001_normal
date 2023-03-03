@@ -41,21 +41,23 @@ class Main
         break;
     }
 
-    if($this->score >= 5)
-    {
-      echo "「大成功です！！！」";
-    }
-    else if($this->score < 0)
-    {
-      echo "「上手に作れましたね！」";
-    }
-    else if($this->score > -2)
-    {
-      echo "「食べるのキツイけど、次はうまく作れますよ。」";
-    }
-    else
-    {
-      echo "「この料理は失敗作です」";
+    if($this->number === 1 || $this->number === 2){
+      if($this->score >= 5)
+      {
+        echo "「大成功です！！！」";
+      }
+      else if($this->score < 0)
+      {
+        echo "「上手に作れましたね！」";
+      }
+      else if($this->score > -2)
+      {
+        echo "「食べるのキツイけど、次はうまく作れますよ。」";
+      }
+      else
+      {
+        echo "「この料理は失敗作です」";
+      }
     }
   }
 }
