@@ -21,7 +21,7 @@ class Cut
   // Return       thickness
   // Memo         
   ///////////////////////////////////////
-  public function cutMeat($meat, $gram) {
+  public function cutMeat(string $meat, int $gram) {
     echo "「肉をカットする厚さを入力してください」\n";
 
     $this->thickness = Validate::validate();

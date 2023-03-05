@@ -4,9 +4,15 @@ require_once 'Validator/Validator.php';
 
 use Validator\Validate;
 
+  ///////////////////////////////////////
+  // ClassName    CookHamburgerSteak
+  // Purpose      ハンバーグの制作と得点の積算
+  // Return       なし
+  // Memo         
+  ///////////////////////////////////////
 class Saute
 {
-  public function Saute($food, $gram){
+  public function Saute(string $food, int $gram){
 
     echo "「{$food}を炒める時間を入力してください」\n";
     $minute = 0;

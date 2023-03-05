@@ -8,8 +8,8 @@ use Cooking\CookHamburgerSteak;
 class Main
 {
   //プロパティの宣言
-  public $score;
-  public $number;
+  public int $score;  //各工程で獲得したポイントをまとめて最後に判定するため
+  public int $number; //メニュー番号をユーザーに入力させた値を保持
 
   //コンストラクタメソッドでプロパティの初期化
   function __construct(){

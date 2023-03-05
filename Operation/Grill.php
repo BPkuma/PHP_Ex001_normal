@@ -26,7 +26,7 @@ class Grill
     $this->point = 0;
   }
   
-  public function grilledIronPlate($food, $thickness){
+  public function grilledIronPlate(string $food, int $thickness){
     echo "「厚さ{$thickness}cmの{$food}を鉄板で焼きます」\n";
     echo "「焼き時間を設定してください」\n";
 
@@ -65,7 +65,7 @@ class Grill
     return $this->point;
   }
   
-  public function grilledOven($food, $gram){
+  public function grilledOven(string $food, int $gram){
     echo "「{$gram}gの{$food}をオーブンで焼きます」\n";
     echo "「焼き時間を設定してください」\n";
 
@@ -91,7 +91,7 @@ class Grill
     return $this->point;
   }
 
-  public function grilledHamburgSteak($gram){
+  public function grilledHamburgSteak(int $gram){
     echo "「{$gram}gのハンバーグをオーブンで焼きます」\n";
     echo "「焼き時間を設定してください」\n";
 

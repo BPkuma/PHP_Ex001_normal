@@ -20,7 +20,7 @@ class Mix
   // Return        この工程の得点と総重量を配列でリターン
   // Memo          
   ///////////////////////////////////////
-  public function mix($onion_gram){
+  public function mix(int $onion_gram){
     echo "「肉を何g使用しますか？」\n";
     $this->meat_gram += Validate::validate_meat(50);
 

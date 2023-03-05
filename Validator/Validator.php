@@ -1,11 +1,17 @@
 <?php
 namespace Validator;
 
+  ///////////////////////////////////////
+  // ClassName    Validate
+  // Purpose      ユーザーの入力値の型を制限する
+  // Return       $word（ユーザーの入力値）
+  // Memo         
+  ///////////////////////////////////////
 class Validate
 {
   public static function validate(){
     while(true){
-      $word = readline();
+      (int)$word = readline();
       if($word === null || $word === 0){
         echo "「正しい入力を行ってください。文字列や数字の０、入力なしでエンターは正しくありません」\n";
       } else {
@@ -15,9 +21,9 @@ class Validate
     return $word;
   }
 
-  public static function validate_meat($amount){
+  public static function validate_meat(int $amount){
     while(true){
-      $word = (int)readline();
+      (int)$word = readline();
       if($word === null || $word === 0){
         echo "「正しい入力を行ってください。文字列や数字の０、入力なしでエンターは正しくありません」\n";
       } else if($word < $amount){
@@ -29,9 +35,9 @@ class Validate
     return $word;
   }
 
-  public static function validate_notice($target, $compare, $amount){
+  public static function validate_notice(string $target, int $compare, int $amount){
     while(true){
-      $word = (int)readline();
+      (int)$word = readline();
       if($word === null || $word === 0){
         echo "「正しい入力を行ってください。文字列や数字の０、入力なしでエンターは正しくありません」\n";
       } else if($word > $compare / $amount){
